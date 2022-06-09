@@ -42,12 +42,10 @@ function onMapClick(e) {
         .openOn(mymap);
 }
 mymap.on('click', onMapClick);
-
 L.marker([41.2348563, 29.14613]).addTo(mymap)
     .bindPopup('<strong>İstanbul')
 	.openPopup(); 
-var overlayMaps = {
-	
+var overlayMaps = {	
 	    Altlık Harita: L.tileLayer.wms('http://localhost:8080/service?', {
         layers: 'youtube',
 		maxZoom: 21,

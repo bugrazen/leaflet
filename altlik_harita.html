@@ -23,7 +23,9 @@ id="map"
 </div>
 <script>
 var stamen=L.tileLayer('http://a.tile.stamen.com/terrain/{z}/{x}/{y}.png',
-{attribution: '&copy; <a href="https://www.kgm.gov.tr">stamen</a>'	}),
+{attribution: '&copy; <a href="https://www.kgm.gov.tr">stamen</a>'}),
+    altlikharita=L.tileLayer('https://IP_ADRESİ:PORT/wmts/yt/global_mercator/{z}/{x}/{y}.png',
+{attribution: '&copy; <a href="https://www.bugraozen.com">ALTLIK HARİTA</a>'}),
 	baselayer=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
 	{attribution: '&copy; <a href="https://www.kgm.gov.tr">OSM</a>'	});
 var mymap = L.map('map', {
@@ -33,6 +35,7 @@ var mymap = L.map('map', {
 	});				
 var baseMaps = {
     "<span style='color: red'>STAMEN</span>": stamen,
+	"<span style='color: blue'>STAMEN</span>": altlikharita,
 	"<span style='color: green'>OSM</span>": baselayer
 	};
 function onMapClick(e) {

@@ -49,10 +49,10 @@ L.marker([41.2348563, 29.14613]).addTo(mymap)
     .bindPopup('<strong>İstanbul')
 	.openPopup(); 
 var overlayMaps = {	
-	    AltlıkHarita: L.tileLayer.wms('http://IP_ADRESİ:PORT/service?', {
+	    Muzeler: L.tileLayer.wms('http://IP_ADRESİ:PORT/geoserver/yt/wms?', {
         layers: 'youtube',
 		maxZoom: 21,
-		minZoom: 1,
+		minZoom: 10,
 		format: 'image/png',
 		transparent: true
     })
